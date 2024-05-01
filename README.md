@@ -1,2 +1,2 @@
 # Python Web Scraper
-A small Python web scraper using Beauitufl Soup and Selenium!
+A small Python web scraper using Beautiful Soup and Selenium!
