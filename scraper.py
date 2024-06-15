@@ -22,12 +22,13 @@ def ScrapeMercariUS(url):
       status = 'unavailable'
   else:
     status = 'available'
+  img_link = soup.select('img[class*="Image__ThumbnailImage-"]')[0].get('src').split('?')[0]
 
   print("Quitting browser...")
   browser.quit()
 
-  return {'name': name,'price': price, 'status': status}
+  return {'name': name,'price': price, 'status': status, 'img_link': img_link}
 
 if __name__ == "__main__":
-  result = ScrapeMercariUS("https://www.mercari.com/us/item/m16149129305/")
-  print(result['name'], result['price'], result['status'])
+  result = ScrapeMercariUS("https://www.mercari.com/us/item/m97348244738/")
+  print(result['name'], result['price'], result['status'], result['img_link'])
